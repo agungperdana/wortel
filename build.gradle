@@ -1,0 +1,26 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.0'
+}
+
+apply plugin: 'java'
+apply plugin: 'io.spring.dependency-management'
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation('org.springframework.boot:spring-boot-starter-web')
+	implementation('org.springframework.boot:spring-boot-starter-data-mongodb')
+}
+
+jar {
+	enabled=false
+}
+
+bootJar {
+	mainClass = 'com.kratonsolution.dummy.wortel'
+}
